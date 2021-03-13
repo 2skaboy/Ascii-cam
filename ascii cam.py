@@ -13,17 +13,10 @@ def main():
         rval = False
         ascii_print = False
 
-    racine = tk.Tk()
-
     while ascii_print:
-        label = tk.Label(racine, text=toASCII(frame, 120, 30))
-        label.pack()
-        racine.mainloop()
-
         key = cv2.waitKey(500)
 
     while rval:
-
         rval, frame = vc.read()
         print(toASCII(frame))
 
